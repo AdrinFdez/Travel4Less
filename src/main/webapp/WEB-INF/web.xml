@@ -15,7 +15,7 @@
     	<location>/error.jsp</location>
   	</error-page>
   	
-  	<!-- Skyscanner Sevlet -->
+  	<!-- Skyscanner Servlet -->
 	<servlet>
     	<servlet-name>SkyscannerSearchController</servlet-name>
     	<servlet-class>aiss.controller.api.SkyscannerSearchController</servlet-class>
@@ -23,6 +23,52 @@
   	<servlet-mapping>
     	<servlet-name>SkyscannerSearchController</servlet-name>
     	<url-pattern>/SkyscannerSearch</url-pattern>
+  	</servlet-mapping>
+  	
+  	<!-- Google Calendar Servlet -->
+  	<servlet>
+    	<servlet-name>GoogleCalendarCalendarListController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleCalendarCalendarListController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleCalendarCalendarListController</servlet-name>
+    	<url-pattern>/googleCalendarCalendarList</url-pattern>
+  	</servlet-mapping>
+  		<!-- Google Calendar DELETE Servlet -->
+  	<servlet>
+    	<servlet-name>GoogleCalendarCalendarDeleteController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleCalendarCalendarDeleteController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleCalendarCalendarDeleteController</servlet-name>
+    	<url-pattern>/googleCalendarCalendarDelete</url-pattern>
+  	</servlet-mapping>
+  		<!-- Google Calendar UPDATE Servlet -->
+  	<servlet>
+    	<servlet-name>GoogleCalendarCalendarUpdateController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleCalendarCalendarUpdateController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleCalendarCalendarUpdateController</servlet-name>
+    	<url-pattern>/googleCalendarCalendarUpdate</url-pattern>
+  	</servlet-mapping>
+  		<!-- Google Calendar CREATE Servlet -->
+  	<servlet>
+    	<servlet-name>GoogleCalendarCalendarNewController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleCalendarCalendarNewController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleCalendarCalendarNewController</servlet-name>
+    	<url-pattern>/googleCalendarCalendarNew</url-pattern>
+  	</servlet-mapping>
+  		<!-- Google Calendar NEXO Servlet -->
+  	<servlet>
+    	<servlet-name>GoogleCalendarSkyscannerController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleCalendarSkyscannerController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleCalendarSkyscannerController</servlet-name>
+    	<url-pattern>/googleCalendarSkyscannerNew</url-pattern>
   	</servlet-mapping>
 	
 	<!--  OAUTH SERVLETS 
@@ -43,6 +89,41 @@
   			initiation servlet could be	/AuthController/X, and the url-pattern of the callback
   			 servlet must be /oauth2callback/X.
   -->
+  <!-- Google Calendar OAUTH SERVLET -->
+  	<!-- OAUTH SERVLET -->
+  <servlet>
+    <description></description>
+    <servlet-name>GoogleCalendarAuthController</servlet-name>
+    <servlet-class>aiss.controller.oauth.GenericAuthController</servlet-class>
+    <init-param>
+      <param-name>provider</param-name>
+      <param-value>GoogleCalendar</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoogleCalendarAuthController</servlet-name>
+    <url-pattern>/AuthController/GoogleCalendar</url-pattern>
+  </servlet-mapping>
+  	<!-- Google Calendar OAUTH2 SERVLET -->
+  <servlet>
+    <description></description>
+    <servlet-name>GoogleCalendarOAuth2Callback</servlet-name>
+    <servlet-class>aiss.controller.oauth.OAuth2Callback</servlet-class>
+    <init-param>
+      <param-name>provider</param-name>
+      <param-value>GoogleCalendar</param-value>
+    </init-param>
+    <init-param>
+      <param-name>onSuccess</param-name>
+      <param-value>redirect:/googleCalendarSkyscannerNew</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoogleCalendarOAuth2Callback</servlet-name>
+    <url-pattern>/oauth2callback/GoogleCalendar</url-pattern>
+  </servlet-mapping>
+  
+  
   <!--    Spotify example -->
   
   <!--  
