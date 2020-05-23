@@ -3,18 +3,27 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
-	<servlet>
-		<servlet-name>HelloWorld</servlet-name>
-		<servlet-class>aiss.HelloWorldServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HelloWorld</servlet-name>
-		<url-pattern>/helloworld</url-pattern>
-	</servlet-mapping>
 	
+	<!-- Welcome Page -->
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
+    	<welcome-file>index.html</welcome-file>
+  	</welcome-file-list>
+  	
+  	<!-- Error Page -->
+  	<error-page>
+    	<exception-type>java.lang.Throwable</exception-type>
+    	<location>/error.jsp</location>
+  	</error-page>
+  	
+  	<!-- Skyscanner Sevlet -->
+	<servlet>
+    	<servlet-name>SkyscannerSearchController</servlet-name>
+    	<servlet-class>aiss.controller.api.SkyscannerSearchController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>SkyscannerSearchController</servlet-name>
+    	<url-pattern>/SkyscannerSearch</url-pattern>
+  	</servlet-mapping>
 	
 	<!--  OAUTH SERVLETS 
   

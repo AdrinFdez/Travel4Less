@@ -1,0 +1,240 @@
+*{margin:0; padding:0;}
+
+body{
+	background:#202857;
+
+}
+
+header{
+	width:100%;
+	overflow:hidden;
+	background:#202857;
+	margin-bottom:20px;
+	z-index:1;
+}
+
+.wrapper{
+	width:90%;
+	max-width:1000px;
+	margin:auto;
+	overflow:hidden;
+}
+
+header .logo{
+	color:#f2f2f2;
+	font-size:50px;
+	line-height:200px;
+	float:left;
+}
+
+header .underlogo{
+	color:#f2f2f2;
+	font-size:15px;
+	line-height:70px;
+	float:left;
+}
+
+header .login{
+	color:#fff;
+	display:inline-block;
+	text-decoration:none;
+	line-height:40px;
+	float:right;
+	padding:10px 20px;
+	font-size:15px;
+	font-weight:bold;
+}
+
+header .login a{
+	color:#fff;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+header .search-box{
+	
+	display:inline-block;
+	line-height:50px;
+	float:right;
+	padding:10px 20px;
+	font-size:15px;
+	
+	backgroud:#a6e7f6;
+	height:40px;
+	border-radius:40px;
+	padding:10px;
+	
+}
+/*Circuolo lupa cambiar*/
+.search-btn{
+	color:#a6e7f6;
+	float:right;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	background:#073763;
+	display:flex;
+	justify-contect:center;
+	align-items:center;
+	line-height:50px;
+}
+
+.search-txt{
+	border:none;
+	background:none;
+	outline:none;
+	float:left;
+	padding:0;
+	color:white;
+	font-size:16px;
+	transition:0.4s;
+	line-height:40px;
+	width:200px;
+}
+
+/* .search-box:hover > .search-txt{
+	width:240px;
+	padding:0 6px;
+}
+
+.search-box:hover > .search-btn{
+	background:white;
+}
+ */
+header nav{
+	line-height:100px;
+	float:right;
+}
+
+header nav a{
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:20px;
+	font-weight:bold;
+}
+
+header nav a:hover{
+	background:#a6e7f6;
+	border-radius:50px;
+}
+
+.header2 {
+	position: fixed;
+	height:100px;
+}
+
+.header2 .logo{
+	line-height:100px;
+	font-size:30px;
+}
+
+.header2 .login{
+	line-height:37px;
+	font-size:15px;
+}
+
+.header2 .search-box{
+	line-height:25px;
+	font-size:30px;
+}
+
+.header2 nav{
+	line-height:50px;
+}
+
+.contenido p {
+	margin-bottom:1em;
+}
+
+@media screen and (max-width: 950px) {
+	header .logo,
+	header .login{
+		text-align:right;
+		line-height:100px;
+	}
+	header .search-box{
+		text-align:right;
+		line-height:100px;
+	}
+	header nav{
+		width:100%;
+		text-align:center;
+		line-height:100px;
+	}
+	
+	.header2{
+		height:auto;
+	}
+	
+	.header2 .logo,
+	.header2 nav{
+		line-height:50px;
+	}
+}
+
+.info{
+	background:#446889; 
+	width:95%;
+	max-width:1000;
+	border:1px solid #000;
+	margin:auto;
+	line-height:50px;
+}
+
+.info div{
+	padding: 30px 40px;
+	color:#f2f2f2;
+	display:inline-block;
+	position: relative;
+	font-size:20px;
+}
+
+.info button{
+	background-color:#073763;
+	border:none;
+	color:white;
+	padding:15px 15px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:15px;
+}
+
+.info input{
+	border:2px solid #aaa;
+	border-radius:4px;
+	margin:8px 0;
+	outline:none;
+	padding:8px;
+	box-sizing:border-box;
+}
+
+div.gallery{
+	margin: 20px;
+	float: left;
+	width: 180px
+}
+
+div.gallery:hover{
+}
+
+div.gallery img {
+	width: 100%
+	height:auto;
+}
+
+div.desc{
+	padding: 15px;
+	text-align: center;
+}
+
+div.title{
+	color:#f2f2f2;
+	font-size:25px;
+	line-height:50px;
+	float:left;
+	padding-left: 50px;
+}
