@@ -60,7 +60,7 @@
 		<div class="container">
 			<h1 id="titleSky">Best flight from <c:out value="${param.origin}"/> to to <c:out value="${param.destination}"/> on the <c:out value="${param.date}"/> </h1>
 			<form id="FlightResultForm" action="/googleCalendarSkyscannerNew" method="post">
-				<button type="submit" name="createCalendar" value="<c:out value="${destination}"/>" style="float: right;">Add a calendar to your collection!</button>
+				<button type="submit" name="createCalendar" value="<c:out value="${param.destination}"/>" style="float: right;">Add a calendar to your collection!</button>
 	    		<table id="flights">
 	        		<tr>
 	            		<th>#</th>
