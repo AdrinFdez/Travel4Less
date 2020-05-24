@@ -68,7 +68,7 @@
 	            	<th>Name</th>
 					<th>Open now?</th>
 					<th style="text-align:center">Location</th>
-					<!--<th>Add</th>-->
+					<th>Add</th>
 	        	</tr>
 	        	<c:forEach items="${requestScope.placeSearch}" var="placeSearch">
 					<tr>
@@ -83,7 +83,7 @@
 						</c:choose></td>
 						<td><p align="center"><iframe src="https://maps.google.com/maps?q=${placeSearch.geometry.location.lat},${placeSearch.geometry.location.lng}&hl=es;z=14&amp;output=embed" width="250" height="250"></iframe></p></td>
 						<!--<td><button type="submit" name="infoPlace" value="<c:out value="${placeSearch.name}"/>">Add to your Drive!</button></td>-->
-						<!--<td><a type="button" href="/googleDrivePlacesNew?rest=${placeSearch.name}&address=${placeSearch.formattedAddress}">Add to your Drive!</a></td>-->
+						<td><a type="button" href="/googleDrivePlacesNew?rest=${placeSearch.name}&address=${placeSearch.formattedAddress}">Add to your Drive!</a></td>
 					</tr>
 				</c:forEach>	
 	    	</table>

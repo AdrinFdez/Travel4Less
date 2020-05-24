@@ -28,6 +28,7 @@
   	</servlet-mapping>
   	
   	<!-- Google Calendar Servlet -->
+  		<!-- Google Calendar LIST Servlet -->
   	<servlet>
     	<description></description>
     	<display-name>GoogleCalendarCalendarListController</display-name>
@@ -82,6 +83,8 @@
     	<servlet-name>GoogleCalendarSkyscannerController</servlet-name>
     	<url-pattern>/googleCalendarSkyscannerNew</url-pattern>
   	</servlet-mapping>
+  	
+  	
 	
 	<!-- Google Places Servlet -->
 	<servlet>
@@ -94,6 +97,68 @@
     	<servlet-name>GooglePlacesController</servlet-name>
     	<url-pattern>/findPlaces</url-pattern>
  	</servlet-mapping>
+ 	
+ 	<!-- Google Drive Servlet -->
+ 		<!-- Google Calendar LIST Servlet -->
+ 	<servlet>
+ 		<description></description>
+    	<display-name>GoogleDriveFileListController</display-name>
+    	<servlet-name>GoogleDriveFileListController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleDriveFileListController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleDriveFileListController</servlet-name>
+    	<url-pattern>/googleDriveFileList</url-pattern>
+  	</servlet-mapping>
+  		<!-- Google Calendar DELETE Servlet -->
+  	<servlet>
+  		<description></description>
+    	<display-name>GoogleDriveFileDeleteController</display-name>
+    	<servlet-name>GoogleDriveFileDeleteController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleDriveFileDeleteController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleDriveFileDeleteController</servlet-name>
+    	<url-pattern>/googleDriveFileDelete</url-pattern>
+  	</servlet-mapping>
+  		<!-- Google Calendar UPDATE Servlet -->
+  	<servlet>
+  		<description></description>
+    	<display-name>GoogleDriveFileUpdateController</display-name>
+    	<servlet-name>GoogleDriveFileUpdateController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleDriveFileUpdateController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleDriveFileUpdateController</servlet-name>
+    	<url-pattern>/googleDriveFileUpdate</url-pattern>
+  	</servlet-mapping>
+  		<!-- Google Calendar CREATE Servlet -->
+  	<servlet>
+  		<description></description>
+    	<display-name>GoogleDriveFileNewController</display-name>
+    	<servlet-name>GoogleDriveFileNewController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleDriveFileNewController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleDriveFileNewController</servlet-name>
+    	<url-pattern>/googleDriveFileNew</url-pattern>
+  	</servlet-mapping>
+  		<!-- Google Drive NEXO Servlet -->
+  	<servlet>
+    	<description></description>
+    	<display-name>GoogleDrivePlacesController</display-name>
+    	<servlet-name>GoogleDrivePlacesController</servlet-name>
+    	<servlet-class>aiss.controller.api.GoogleDrivePlacesController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleDrivePlacesController</servlet-name>
+    	<url-pattern>/googleDrivePlacesNew</url-pattern>
+  	</servlet-mapping>
+  
+ 	
+ 	
+ 	
+ 	
 	<!--  OAUTH SERVLETS 
   
   	For each OAuth 2.0 service, you need to create two servlets: one for the initiation 
@@ -112,6 +177,8 @@
   			initiation servlet could be	/AuthController/X, and the url-pattern of the callback
   			 servlet must be /oauth2callback/X.
   -->
+  
+  
   <!-- Google Calendar OAUTH SERVLET -->
   	<!-- OAUTH SERVLET -->
   <servlet>
@@ -128,7 +195,7 @@
     <servlet-name>GoogleCalendarAuthController</servlet-name>
     <url-pattern>/AuthController/GoogleCalendar</url-pattern>
   </servlet-mapping>
-  	<!-- Google Calendar OAUTH2 SERVLET -->
+  	<!-- OAUTH2 SERVLET -->
   <servlet>
     <description></description>
     <display-name>GoogleCalendarOAuth2Callback</display-name>
@@ -147,6 +214,42 @@
     <servlet-name>GoogleCalendarOAuth2Callback</servlet-name>
     <url-pattern>/oauth2callback/GoogleCalendar</url-pattern>
   </servlet-mapping>
+
+	<!-- Google Drive OAUTH SERVLET -->
+  	<!-- OAUTH SERVLET -->
+  	<servlet>
+    	<description></description>
+    	<display-name>GoogleDriveAuthController</display-name>
+    	<servlet-name>GoogleDriveAuthController</servlet-name>
+    	<servlet-class>aiss.controller.oauth.GenericAuthController</servlet-class>
+    	<init-param>
+      		<param-name>provider</param-name>
+      		<param-value>GoogleDrive</param-value>
+    	</init-param>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleDriveAuthController</servlet-name>
+    	<url-pattern>/AuthController/GoogleDrive</url-pattern>
+  	</servlet-mapping>
+  		<!-- OAUTH2 SERVLET -->
+  	<servlet>
+    	<description></description>
+    	<display-name>GoogleDriveOAuth2Callback</display-name>
+    	<servlet-name>GoogleDriveOAuth2Callback</servlet-name>
+    	<servlet-class>aiss.controller.oauth.OAuth2Callback</servlet-class>
+    	<init-param>
+      		<param-name>provider</param-name>
+      		<param-value>GoogleDrive</param-value>
+    	</init-param>
+    	<init-param>
+      		<param-name>onSuccess</param-name>
+      		<param-value>redirect:/googleDrivePlacesNew</param-value>
+    	</init-param>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GoogleDriveOAuth2Callback</servlet-name>
+    	<url-pattern>/oauth2callback/GoogleDrive</url-pattern>
+  	</servlet-mapping>
   
   
   <!--    Spotify example -->

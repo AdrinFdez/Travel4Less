@@ -5,5 +5,12 @@
         "clientSecret": "Qf-z9-pPLOKCQocyJM8Vaacx",
         "authorizationFormUrl": "https://accounts.google.com/o/oauth2/v2/auth",
         "scopes": ["https://www.googleapis.com/auth/calendar.readonly","https://www.googleapis.com/auth/calendar"]
+    },
+    "GoogleDrive": { 
+        "tokenUrl": "https://www.googleapis.com/oauth2/v4/token",
+        "clientId": "889489823022-v29pg8qhr9jilsumhfb92r713vig34d1.apps.googleusercontent.com",
+        "clientSecret": "Qf-z9-pPLOKCQocyJM8Vaacx",
+        "authorizationFormUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+        "scopes": ["https://www.googleapis.com/auth/drive"]
     }
 }		
