@@ -6,6 +6,7 @@
     <packaging>war</packaging>
     <version>1.4.0</version>
 
+
     <groupId>aiss</groupId>
     <artifactId>Travel4Less</artifactId>
 
