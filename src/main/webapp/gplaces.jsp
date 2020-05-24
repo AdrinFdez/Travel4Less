@@ -27,7 +27,7 @@
 		
   			
   			<nav style="padding-top: 50px;">
-  				<a href="index.html">Home</a>
+  				<a href="index.jsp">Home</a>
   				<a href="faqs.html">FAQs</a>
   				<a href="whoarewe.html">Who are we?</a>
   				<a href="api/docs/index.html">API</a>

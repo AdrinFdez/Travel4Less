@@ -1,4 +1,5 @@
- <!DOCTYPE html> 
+<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -19,7 +20,7 @@
 		
   			
   			<nav>
-  				<a href="index.html">Home</a>
+  				<a href="index.jsp">Home</a>
   				<a href="faqs.html">FAQs</a>
   				<a href="whoarewe.html">Who are we?</a>
   				<a href="api/docs/index.html">API</a>
@@ -65,6 +66,19 @@
       <div class="img">
         <img src="img/travel4less3.png">
       </div>
+    </div>
+    <div class="info">
+    	<c:forEach items="${requestScope.stats}" var="stat">
+    		<p>Confirmed: <c:out value="${stat.confirmed}"/> from which: </p>
+    		<p>Recovered: <c:out value="${stat.recovered}"/></p>
+    		<p>Deaths: <c:out value="${stat.deaths}"/></p>
+    		<p>Province: <c:out value="${stat.province}"/></p>
+    		<p>Last Update: <c:out value="${stat.lastUpdate}"/></p>
+    		<br>
+		            
+	    </c:forEach>
+    	
+    	
     </div>
 
   </body>
