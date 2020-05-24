@@ -53,7 +53,7 @@
 
     	<p class="message">${message}</p>
 		<form id="calendars" action="/findPlaces" method="post">
-	    <!-- <button type="submit" name="toPlaces" value="" style="float: right;">Find some places to visit!</button>-->
+	    <button type="submit" name="toPlaces" value="" style="float: right;">Find some places to visit!</button>
 	    	<table id="calendars">
 	        	<tr>
 	            	<th>Id</th>

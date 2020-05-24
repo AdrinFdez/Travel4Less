@@ -17,6 +17,8 @@
   	
   	<!-- Skyscanner Servlet -->
 	<servlet>
+    	<description></description>
+    	<display-name>SkyscannerSearchController</display-name>
     	<servlet-name>SkyscannerSearchController</servlet-name>
     	<servlet-class>aiss.controller.api.SkyscannerSearchController</servlet-class>
   	</servlet>
@@ -27,6 +29,8 @@
   	
   	<!-- Google Calendar Servlet -->
   	<servlet>
+    	<description></description>
+    	<display-name>GoogleCalendarCalendarListController</display-name>
     	<servlet-name>GoogleCalendarCalendarListController</servlet-name>
     	<servlet-class>aiss.controller.api.GoogleCalendarCalendarListController</servlet-class>
   	</servlet>
@@ -36,6 +40,8 @@
   	</servlet-mapping>
   		<!-- Google Calendar DELETE Servlet -->
   	<servlet>
+    	<description></description>
+    	<display-name>GoogleCalendarCalendarDeleteController</display-name>
     	<servlet-name>GoogleCalendarCalendarDeleteController</servlet-name>
     	<servlet-class>aiss.controller.api.GoogleCalendarCalendarDeleteController</servlet-class>
   	</servlet>
@@ -45,6 +51,8 @@
   	</servlet-mapping>
   		<!-- Google Calendar UPDATE Servlet -->
   	<servlet>
+    	<description></description>
+    	<display-name>GoogleCalendarCalendarUpdateController</display-name>
     	<servlet-name>GoogleCalendarCalendarUpdateController</servlet-name>
     	<servlet-class>aiss.controller.api.GoogleCalendarCalendarUpdateController</servlet-class>
   	</servlet>
@@ -54,6 +62,8 @@
   	</servlet-mapping>
   		<!-- Google Calendar CREATE Servlet -->
   	<servlet>
+    	<description></description>
+    	<display-name>GoogleCalendarCalendarNewController</display-name>
     	<servlet-name>GoogleCalendarCalendarNewController</servlet-name>
     	<servlet-class>aiss.controller.api.GoogleCalendarCalendarNewController</servlet-class>
   	</servlet>
@@ -63,6 +73,8 @@
   	</servlet-mapping>
   		<!-- Google Calendar NEXO Servlet -->
   	<servlet>
+    	<description></description>
+    	<display-name>GoogleCalendarSkyscannerController</display-name>
     	<servlet-name>GoogleCalendarSkyscannerController</servlet-name>
     	<servlet-class>aiss.controller.api.GoogleCalendarSkyscannerController</servlet-class>
   	</servlet>
@@ -71,6 +83,17 @@
     	<url-pattern>/googleCalendarSkyscannerNew</url-pattern>
   	</servlet-mapping>
 	
+	<!-- Google Places Servlet -->
+	<servlet>
+		<description></description>
+    	<display-name>GooglePlacesController</display-name>
+    	<servlet-name>GooglePlacesController</servlet-name>
+    	<servlet-class>aiss.controller.api.GooglePlacesController</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GooglePlacesController</servlet-name>
+    	<url-pattern>/findPlaces</url-pattern>
+ 	</servlet-mapping>
 	<!--  OAUTH SERVLETS 
   
   	For each OAuth 2.0 service, you need to create two servlets: one for the initiation 
@@ -93,6 +116,7 @@
   	<!-- OAUTH SERVLET -->
   <servlet>
     <description></description>
+    <display-name>GoogleCalendarAuthController</display-name>
     <servlet-name>GoogleCalendarAuthController</servlet-name>
     <servlet-class>aiss.controller.oauth.GenericAuthController</servlet-class>
     <init-param>
@@ -107,6 +131,7 @@
   	<!-- Google Calendar OAUTH2 SERVLET -->
   <servlet>
     <description></description>
+    <display-name>GoogleCalendarOAuth2Callback</display-name>
     <servlet-name>GoogleCalendarOAuth2Callback</servlet-name>
     <servlet-class>aiss.controller.oauth.OAuth2Callback</servlet-class>
     <init-param>

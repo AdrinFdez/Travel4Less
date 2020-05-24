@@ -23,7 +23,7 @@ private static final Logger log = Logger.getLogger(GoogleCalendarCalendarNewCont
         	req.getSession().setAttribute("destination", req.getParameter("createCalendar"));
         }
         String title = (String) req.getSession().getAttribute("destination");
-        req.getSession().setAttribute("place", title);
+        req.getSession().setAttribute("destination", title);
         if (accessToken != null && !"".equals(accessToken)) {
             if (title != null && !"".equals(title)) {
                 GoogleCalendarResource gcResource = new GoogleCalendarResource(accessToken);
