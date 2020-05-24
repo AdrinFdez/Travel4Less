@@ -4,7 +4,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
-    <version>1.3.1</version>
+    <version>1.4.0</version>
+
 
     <groupId>aiss</groupId>
     <artifactId>Travel4Less</artifactId>
